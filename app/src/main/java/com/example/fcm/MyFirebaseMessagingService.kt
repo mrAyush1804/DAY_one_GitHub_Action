@@ -68,11 +68,6 @@ class MyFirebaseMessagingService:FirebaseMessagingService() {
             .setContentText(message)
             .setPriority(NotificationCompat.PRIORITY_HIGH) // High priority
             .setContentIntent(pendingIntent) // Click pe kya hoga
-            .addAction(
-                R.drawable.bulb, // Action ke liye alag icon
-                "Reply",
-                replyPendingIntent
-            )
             .setAutoCancel(true)
 
         notificationManager.notify(1, builder.build())
