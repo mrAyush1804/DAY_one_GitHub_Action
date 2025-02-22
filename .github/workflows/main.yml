@@ -1,0 +1,42 @@
+# .github/workflows/day1.yml
+name: Day 1 - Basics and Env Vars
+
+# Trigger the workflow on push to any branch
+on: 
+  push
+
+# Define jobs
+jobs:
+  learn-basics:
+    # Job name and runner
+    runs-on: ubuntu-latest
+    
+    # Job-level environment variables
+    env:
+      JOB_LEVEL_VAR: "I am available to all steps!"
+
+    # Steps to execute
+    steps:
+      # Step 1: Checkout the code
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Step 2: Echo default GitHub env vars
+      - name: Print Default Env Vars
+        run: |
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Actor: $GITHUB_ACTOR"
+          echo "Commit SHA: $GITHUB_SHA"
+
+      # Step 3: Echo job-level env var
+      - name: Print Job-Level Env Var
+        run: |
+          echo "Job-level variable: $JOB_LEVEL_VAR"
+
+      # Step 4: Use step-level env var
+      - name: Print Step-Level Env Var
+        env:
+          STEP_LEVEL_VAR: "I am only available in this step!"
+        run: |
+          echo "Step-level variable: $STEP_LEVEL_VAR"
+          echo "Job-level variable is still here: $JOB_LEVEL_VAR"
