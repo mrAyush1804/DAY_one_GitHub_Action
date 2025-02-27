@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomEditText">
+        <attr name="customBackground" format="color" />
+        <attr name="customTextSize" format="dimension" />
+        <attr name="errorTextColor" format="color" />
+        <attr name="defaultDrawable" format="reference" />
+        <attr name="customFont" format="reference" />
+        <attr name="inputType" format="enum">
+            <enum name="name" value="0"/>
+            <enum name="email" value="1"/>
+            <enum name="password" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

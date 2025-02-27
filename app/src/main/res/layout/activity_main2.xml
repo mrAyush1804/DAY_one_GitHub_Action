@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+
+
+
+    <com.example.fcm.CustomEdittext.CustomEditText
+        android:id="@+id/custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:inputType="email"
+        app:customBackground="@color/white"
+        android:layout_marginHorizontal="20dp"
+        app:customTextSize="17dp"
+        android:hint="Enter the eamil"
+        android:layout_marginVertical="50dp"
+        android:padding="15dp"
+        app:errorTextColor="@color/black"/>
+
+
+
+    <com.example.fcm.CustomEdittext.CustomEditText
+        android:id="@+id/custom2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:inputType="password"
+        app:customBackground="@color/white"
+        android:layout_marginHorizontal="20dp"
+        app:customTextSize="17dp"
+        android:hint="Password"
+        android:layout_marginVertical="50dp"
+        android:padding="15dp"
+        app:errorTextColor="@color/red"/>
+
+
+
+</LinearLayout>
